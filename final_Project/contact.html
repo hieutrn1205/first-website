@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Wonderful Vietnam</title>
+  <meta name="description" content="A wonderful country with amazing places, delicious foods, and friendly people.  Where I come from, where I grew up, and where holding the most of my memories.">
+  <meta name="author" content="Tran Hieu">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="images/png" href="images/icon.png">
+    <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="myFunction()">
+  <div id="loader"></div>
+<div id="myDiv" style="display: none"> 
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="explore.html">Home</a></li>
+              <li><a href="dailylife.html">Daily Grid</a></li>
+              <li><a href="travel.html">Travel</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+  <header>
+  <h1>
+    My Information
+  </h1>
+  </header>
+  <div class="immobile">
+    <div class="resume">
+      <img src="images/Resume.jpg" height="900" width="850">
+    </div>
+    <div class="profile-card">
+      <img src="images/profile.jpg" alt="Hieu" style="width:100%">
+      <h1>Hieu Tran</h1>
+      <p class="title">Associating in Web Page Development.</p>
+      <p id="description">Bronx Community College</p>
+      <a class="social-icon"href="https://www.instagram.com/terrytrn/" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a class="social-icon"href="https://www.facebook.com/haiyen.pham.226" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a class="social-icon"href="https://www.linkedin.com/in/hieu-tran-4b1bb6197/" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <p><button class="contact-button"><a href="mailto:hieutrn1205@gmail.com" id="mail">Contact</a></button></p>
+    </div>
+  </div>
+   <div class="mobile">
+    <h1 id="mobile-heading">Contact me</h1>
+    <div class="profile-card">
+      <img src="images/profile.jpg" alt="Hieu" style="width:100%">
+      <h1>Hieu Tran</h1>
+      <p class="title">Associating in Web Page Development.</p>
+      <p id="description">Bronx Community College</p>
+      <a class="social-icon" href="https://www.instagram.com/terrytrn/" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a class="social-icon" href="https://www.facebook.com/haiyen.pham.226" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a class="social-icon" href="https://www.linkedin.com/in/hieu-tran-4b1bb6197/" target="_blank"><i class="fa fa-linkedin"></i></a>
+      <p><button class="contact-button"><a href="mailto:hieutrn1205@gmail.com" id="mail">Contact</a></button></p>
+    </div>
+   </div>
+  <footer>Copyright &copy;2019 by Tran Hieu</footer>
+</div> 
+<script>
+  var myVar;
+
+  function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+  }
+
+  function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+  }
+</script>
+</body>
+</html>

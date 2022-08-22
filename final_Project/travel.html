@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Wonderful Vietnam</title>
+  <meta name="description" content="A wonderful country with amazing places, delicious foods, and friendly people.  Where I come from, where I grew up, and where holding the most of my memories.">
+  <meta name="author" content="Tran Hieu">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="images/png" href="images/icon.png">
+
+</head>
+<body onload="myFunction()">
+  <div id="loader"></div>
+<div id="myDiv" style="display: none"> 
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="explore.html">Home</a></li>
+              <li><a href="dailylife.html">Daily Grid</a></li>
+              <li><a href="travel.html">Travel</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="wrapper">
+  <h1 id="place-caption">Places in Vietnam</h1>
+  <div class="cols">
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/sapa.png)">
+            <div class="inner">
+              <p>Sa Pa</p>
+              <span>Lao Cai Province (Northern)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Lao Cai is best known for the high mountain, terrace.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/beninhbinh1.jpg)">
+            <div class="inner">
+              <p>Ninh Binh</p>
+              <span>Ninh Binh Province (Northern)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Ninh Binh is the land of limestone mountains. There are many places for visitors such as: Trang An, Mua Cave and more places.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/phuyen.jpg)">
+            <div class="inner">
+              <p>Dong Hoa</p>
+              <span>Phu Yen Province (Southern)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>There are located at South Central Coast, with many magnificent beaches and gorgeous hills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/bedalat.jpg)">
+            <div class="inner">
+              <p>Da lat</p>
+              <span>Lam Dong Province (Southern)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Da Lat also known as the Foggy City because it usally occurs fog and the best place for people want to escape from the city.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/landmark.jpeg)">
+            <div class="inner">
+              <p>Ho Chi Minh City</p>
+              <span>Ho Chi Minh (Southern)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>The most economic city in Vietnam. The photo is Landmark 81 had built by Vingroup and has the the height in top 100 the heightest building in the world.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/behue.jpg)">
+            <div class="inner">
+              <p>Hue</p>
+              <span>Thua Thien-Hue Province (Mid-Northern)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>This place consist of Vietnam's ancient court. There was capital city of Vietnam by the last dynasty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/cantho.jpg)">
+            <div class="inner">
+              <p>Can Tho City</p>
+              <span>Can Tho Province (Western)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Most of territories are rivers with the famous Delta - Mekong Delta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/babinhthuan.jpg">
+            <div class="inner">
+              <p>Lagi</p>
+              <span>Binh Thuan Province (Mid-Southern)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>There are beaches for tourists, and where fishermans go out the sea to fishing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/hanoi1.jpg)">
+            <div class="inner">
+              <p>Ha Noi Capital</p>
+              <span>Ha Noi (Northern)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>The currently capital of Vietnam. The headquarter of Vietnam's government.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/sondoong.jpg)">
+            <div class="inner">
+              <p>Son Doong Cave</p>
+              <span>Quang Binh Province (Northern)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>The most beautiful cave in Vietnam. Famous on the world and we can visit and stay inside of it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container2">
+          <div class="front" style="background-image: url(images/travel/halong.jpg)">
+            <div class="inner">
+              <p>Ha Long Bay</p>
+              <span>Quang Ninh Province (Northern)</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>The pretty bay of the Northern.  It was recorded by UNESCO.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+ <footer>Copyright &copy;2019 by Tran Hieu. <a href="contact.html">Get in touch</a></footer>
+</div>
+<script>
+  var myVar;
+
+  function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+  }
+
+  function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+  }
+</script>
+</body>
+</html>

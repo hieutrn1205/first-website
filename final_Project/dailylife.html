@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Wonderful Vietnam</title>
+  <meta name="description" content="A wonderful country with amazing places, delicious foods, and friendly people.  Where I come from, where I grew up, and where holding the most of my memories.">
+  <meta name="author" content="Tran Hieu">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="icon" type="images/png" href="images/icon.png">
+</head>
+<body onload="myFunction()">
+  <div id="loader"></div>
+<div id="myDiv" style="display: none">
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="explore.html">Home</a></li>
+              <li><a href="dailylife.html">Grid</a></li>
+              <li><a href="travel.html">Travel</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="logo">
+    <img src="images/logo.png" alt="logo" >
+  </div>
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="explore.html">Home</a></li>
+      <li><a href="dailylife.html">Daily Grid</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>  
+  <h2 id="lifestyle-caption1">Daily lives in Vietnam</h2>
+  <div class="photo-grid row">
+    <div class="column">
+      <div class="card">
+      <a><img class="card-img-top" src="images/lifestyle/bacho.jpg"></a>
+        <h2 class="card-body">Ho Chi Minh</2>
+      </div>
+      <div class="card">
+      <a><img class="card-img-top" src="images/lifestyle/aodai.jpg"></a>
+        <h2 class="card-body">Ao dai</h2>
+      </div>
+      <div class="card">
+      <a><img class="card-img-top" src="images/lifestyle/lamnhan.jpeg"></a>
+        <h2 class="card-body">Inscense Maker</h2>
+      </div>
+      <div class="card">
+      <a><img class="card-img-top" src="images/lifestyle/tet.jpg"></a>
+        <h2 class="card-body">Lunar New Year</h2>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+      <a><img class="card-img-top" src="images/lifestyle/chonoi.jpg"></a>
+        <h2 class="card-body">Floating market</h2>
+      </div>
+      <div class="card">
+      <a><img class="card-img-top" src="images/lifestyle/hangrong3.jpg"></a>
+        <h2 class="card-body">A peddler</h2>
+      </div>
+      <div class="card">
+      <a><img class="card-img-top" src="images/lifestyle/hangrong2.jpg"></a>
+        <h2 class="card-body">Vegetables peddler</h2>
+      </div>
+      <div class="card">
+      <a><img class="card-img-top" src="images/lifestyle/landmark.jpg"></a>
+        <h2 class="card-body">Landmark Vincome Center</h2>
+      </div>
+    </div>
+    <div id="mobile-grid" class="column">
+      <div class="card">
+      <a><img class="card-img-top"src="images/lifestyle/hangrong.jpg"></a>
+        <h2 class="card-body">Non la</h2>
+      </div>
+      <div class="card">
+      <a><img class="card-img-top"src="images/lifestyle/ducba.jpg"></a>
+        <h2 class="card-body">Notre Dame Catheral</h2>
+      </div>
+      <div class="card">
+      <a><img class="card-img-top"src="images/lifestyle/chantrau.jpg"></a>
+        <h2 class="card-body">Ploughing</h2>
+      </div>
+      <div class="card">
+      <a><img class="card-img-top"src="images/lifestyle/xeco.jpg"></a>
+        <h2 class="card-body">Traffic</h2>
+      </div>
+    </div>
+  </div> 
+  <footer>Copyright &copy;2019 by Tran Hieu. <a href="contact.html">Get in touch</a></footer>  
+</div> 
+<script>
+  var myVar;
+
+  function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+  }
+
+  function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+  }
+</script>
+</body>
+</html>

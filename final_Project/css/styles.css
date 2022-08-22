@@ -1,0 +1,1259 @@
+/*Background of index site
+__________________________________________________*/
+#bg{
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+/*Heading in Homepage*/
+.hero-heading {
+  color: white;
+  margin-top: 15rem;
+}
+
+/*around the hero-heading*/
+
+/* Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+  border-radius: 100px;
+  margin-left: 0;
+}
+.button.button-primary:hover {
+background-color: #fff;
+  color: #33C3F0;
+  transition: 0.8s ease;
+  overflow: hidden;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/*End of styling index site
+____________________*/
+
+/*My own font-style
+___________________*/
+@font-face{
+  font-family: myFirstFont;
+  src: url("../fonts/brusher.otf");
+}
+
+@font-face{
+  font-family: mySecondFont;
+  src: url("../fonts/script.ttf");
+}
+/*____________________*/
+
+/* CORE STYLES */
+:root {
+  --primary-color: rgba(255, 255, 255, 0.25);
+  --overlay-color: rgba(24, 39, 51 , 0.85);
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* MENU STYLES 
+_________________*/
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: rgba(240, 231, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger Lines - Top & Bottom
+__________________________________ */
+
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: rgba(240, 231, 0);
+}
+
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition:  opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+/*End of styling hamburger menu
+________________________*/
+
+
+/*Style of loader
+-------------------*/
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #FF806F;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+/*End of styling loader
+------------------*/
+
+/*Style of explore site
+________________________*/
+.banner {
+  font-family: myFirstFont;
+}
+
+
+.banner{
+  background-color: #FF3200;
+  background-size: cover;
+}
+
+.banner-heading {
+  color: #FFEC2E;
+}
+
+#nav-scroll {
+  color: #FFEC2E;
+  text-align: center;
+  font-size: 2em;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 10px;
+
+}
+
+.food-heading, .map-heading {
+  font-family: mySecondFont;
+}
+
+.food-heading, .map-heading {
+  text-align: center;
+}
+
+.food-heading {
+  color: white;
+  padding-top: 10%;
+}
+
+.foods {
+  background: rgba(163, 163, 163, 0.75);
+  color: #fff;
+  height: 900px;
+  position: relative;
+}
+
+.foods > h2 {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.foods > p {
+  font-family: 'Jomolheri', serif;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.foods a {
+  color: white;
+  text-decoration-color: yellow;
+  transition: 1.25s ease;
+  display: inline-block;
+}
+
+.foods a:hover {
+  color: yellow;
+  text-decoration-color: white;
+  transform: translateY(-20px);
+}
+
+
+.foods:before {
+  content: '';
+  background: url('../images/cuisine.jpg') no-repeat center center/cover;
+  height: 900px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: -1;
+}
+
+
+.lifestyle {
+  background: url('../images/lifestyle/denlong.jpg') no-repeat center center/cover;
+  height: 100vh;
+  box-sizing: border-box;
+  transition: 5s ease;
+}
+
+.lifestyle:hover {
+  transform: scale(1.25);
+}
+
+.travel {
+  background: url('../images/travel/travel.jpeg') no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+  padding: 7%;
+}
+
+#travel-link {
+  text-decoration: none;
+}
+
+#travel-caption {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 70px;
+  color: #fff;
+  text-align: center;
+  font-family: mySecondFont, sans-serif;
+  font-size: 15rem; 
+}
+
+.map {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  height: 100%;
+}
+/*End of styling explore site*/
+
+footer {
+  text-align: center;
+  font-size: 2em;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 5%;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  position: fixed;
+  color: rgba(194, 194, 194);
+  width: 100%;
+}
+
+
+/*Scroll down the banner will fading out*/
+
+.scrolldown {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-80px) translateX(-50%)
+              rotate(45deg);
+}
+
+.scrolldown span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid yellow;
+  border-right: 2px solid yellow;
+  animation: animate 1s linear infinite;
+  opacity: 0;
+}
+
+.scrolldown span:nth-child(1) {
+  transform: translate(-15px, -15px);
+  animation-delay: -0.2s;
+}
+
+.scrolldown span:nth-child(2) {
+  transform: translate(0px, 0px);
+  animation-delay: -0.1s;
+}
+
+.scrolldown span:nth-child(3) {
+  transform: translate(15px, 15px);
+  animation-delay: 0s;
+}
+
+
+@keyframes animate {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+
+  25% {
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+
+ 50%, 100% {
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+  }
+  
+}
+/*End of scrolling down fade*/
+
+/*Style of dailylife site
+__________________________*/
+
+#lifestyle-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+#lifestyle-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: mySecondFont;
+  font-size: 10em;
+}
+
+#lifestyle-caption1 {
+  font-family: mySecondFont;
+  font-size: 10em;
+  text-align: center;
+  color: black;
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
+
+/*End of styling dailylife site*/
+
+/*CREATE THE RÉPONSIVE PHOTO GRID
+______________________*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+a img {
+  vertical-align: middle;
+  width: 100%;
+  border: 1.5em solid #fff;
+  z-index: 0;
+}
+
+.card {
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.5);
+  margin-top: 7%;
+
+}
+.card-body {
+  background-color: white;
+  font-family: mySecondFont;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.card > h2 {
+  letter-spacing: 0;
+}
+
+/*End of styling dailylife site
+________________________*/
+
+/*Style of travel site
+_______________________*/
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper #place-caption{
+  font-size: 3rem;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.wrapper{
+  margin: 0 auto;
+  background-image: url("../images/black.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.col{
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.container2{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.front,
+.back{
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  text-align: center;
+  min-height: 280px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.back{
+  background: rgb(54, 54, 54);
+  background: -webkit-linear-gradient(-45deg,  rgb(57, 57, 57) 0%, rgb(95, 69, 130, 0.7) 80%);
+  background: -o-linear-gradient(-45deg,  rgb(57, 57, 57) 0%, rgb(95, 69, 130, 0.7) 80%);
+  background: linear-gradient(-45deg,  rgb(58, 57, 57) 0%, rgba(95, 69, 130, 0.7) 80%)
+}
+
+.front:after{
+  position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+}
+.container2:hover .front,
+.container2:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+}
+
+.container2 .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container2 .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container2:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container2:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+  color: rgba(255,255,255,0.7);
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+
+/*End of styling travel site*/
+
+/*Styling of contact site*/
+
+header {
+  margin: 0; padding: 2em 5em 4em; 
+  color: white;
+  overflow:hidden;
+  position: relative;
+  text-align: center;
+}
+
+header > h1 {
+  transform: skewY(-4deg);
+}
+
+header::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width:100%;
+  transform: skewY(-4deg);
+  background: red;
+  transform-origin: bottom left;
+  z-index: -1;
+}
+
+.resume {
+  display: inline-block;
+  height: 100%;
+  margin-top: 10px;
+  width: 47%;
+
+}
+
+.profile-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 650px;
+  text-align: center;
+  display: inline-block;
+  width: 47%;
+  margin-left: 7%;
+  top: 10%;
+}
+
+.title {
+  color: grey;
+  font-size: 2.7rem;
+}
+
+#description {
+  font-size: 2rem;
+}
+
+.contact-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 0;
+  margin-top: 10px;
+}
+
+.contact-button > a {
+  text-decoration: none;
+  color: white;
+}
+
+.social-icon {
+  text-decoration: none;
+  font-size: 3rem;
+  color: black;
+  padding: 5px;
+}
+
+.social-icon:hover {
+  color: red;
+}
+
+.contact-button:hover, .social-icon:hover {
+  opacity: 0.65;
+}
+
+/*End of stling of contact site*/
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*RESPONSIVE PHOTO GRID */
+@media (min-width: 300px), (max-width: 550px) {
+  .section{
+    padding: 10rem 0 7rem;
+  }
+
+  .hero-heading {
+    font-size: 2em;
+    margin-top: 70%;
+  }
+
+  .row{
+    text-align: center;
+  }
+
+  .one-half.column {
+    width: 100%;
+  }
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+ }
+
+  .hero-heading {
+    font-size: 4rem;
+    margin-top: 65%;
+  }
+ 
+  .banner-heading{
+  font-size: 10.5rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
+  }
+  .banner {
+    padding-top: 2em;
+    padding-bottom: 20px;
+  }
+  .food-heading {
+    font-size: 9rem;
+  }
+  .button {
+    font-size: 1.4rem;
+  }
+  .photo-grid{
+    padding-left: 0;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .section {
+    padding: 14rem 0 15rem;
+  }
+
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .banner-heading{
+    font-size: 10rem;
+  }
+  .hero-heading{
+    font-size: 4rem;
+    text-align: left;
+    margin-top: 35%;
+  }
+  .section.hero {
+  background: url("../images/container.jpg");
+  height: 400px;
+  background-size: cover;
+  color: white;
+  }
+  .banner-heading{
+  font-size: 13rem;
+  display: block;
+  text-align: center;
+  }
+  .banner {
+    min-height: 100vh;
+    padding-top: 22.5%;
+  }
+  .food-heading {
+    font-size: 10rem;
+  }
+  .button {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    width: 50%;
+    margin-left: 20%;
+  }
+
+  .row {
+    text-align: left;
+  }
+
+  .map-heading {
+    font-size: 10rem;
+  }
+
+  #mySidenav {
+    display: none;
+  }
+
+  .mobile-image {
+    margin-left: 35%;
+  }
+
+  .photo-grid{
+    padding-left: 15%;
+  }
+
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 5rem;
+    text-align: left;
+    margin-top: 30%;
+  }
+  .section.hero {
+  background: url("../images/container.jpg");
+  height: 255px;
+  background-size: cover;
+  color: white;
+  }
+  .banner-heading{
+  font-size: 15rem;
+  
+  text-align: center;
+  padding-top: 22.5%;
+
+  }
+  .banner {
+    min-height: 100vh;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+  .food-heading {
+    font-size: 13rem;
+  }
+  .button {
+    font-size: 1.6rem;
+  }
+  .container {
+    margin-left: 17%;
+  }
+
+  .one-half.column {
+    width: 70%;
+  }
+
+  .row {
+    text-align: left;
+  }
+
+  .map-heading {
+    font-size: 13rem;
+    margin-top: 5%;
+  }
+  
+  #image1, #image2 {
+  width: 47%;
+  max-height: 100%;
+  display: inline-block;
+  }
+  #image2 {
+  padding-left: 3%;
+  }
+
+  .map-images {
+  display: block;
+  margin-top: 5%;
+  }
+ 
+  .mobile-image {
+    display: none;
+  }
+
+   #mobile-mySidenav {
+    display: none;
+  }
+
+  #mySidenav {
+    display: block;
+  }
+
+  .logo {
+    display: none;
+    text-align: center;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  /*Style for photo-grid on Daily lives site*/
+  
+}
+/*Hide scrolling down animation
+__________________________________*/
+@media (max-width: 750px){
+  .scrolldown{
+    display: none;
+  }
+  .map-images {
+    display: none;
+  }
+
+  .mobile-image img{
+    margin-left: 17%;
+    display: block;
+  }
+
+}
+
+@media (max-width: 1000px){
+  .map-images {
+    display: none;
+  }
+  .mobile-image img {
+    width: 47%;
+    height: 550px;
+  }
+
+  #mobile-mySidenav {
+    display: none;
+  }
+
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  body {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 1.5rem;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+  .hero-heading {
+    text-align: center;
+    margin-top: 70%;
+  }
+
+  .button-primary {
+    justify-content: center;
+    margin-left: 33%;
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .menu-wrap {
+    display: none;
+  }
+
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .mobile-nav {
+    font-size: 15.5pt;
+  }
+
+  .mobile-nav > ul > li {
+    list-style-type: none;
+    text-align: center;
+    border: 3px black solid;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .mobile-nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .mobile-image img {
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  .foods {
+    margin-top: 10px;
+    height: 90vh;
+  }
+
+  .food-heading {
+    font-size: 3.6em;
+    padding-top: 24%;
+  }
+
+  .foods > p {
+    font-size: 1.5em;
+    padding-top: 20%;
+    margin-right: 12%;
+    margin-left: 12%;
+  }
+
+  #travel-caption {
+    font-size: 3.6em;
+  }
+
+  .travel {
+    height: 70vh;
+  }
+
+  #travel-caption {
+    padding-top: 30%;
+  }
+
+  .lifestyle {
+    height: 100vh;
+  }
+
+  #lifestyle-caption {
+    font-size: 3.6em;
+    width: 70%;
+  }
+
+  #loader {
+    display: none;
+  }
+
+  #lifestyle-caption1 {
+    font-size: 3.6em;
+    margin-top: 10%;
+  }
+
+  #mobile-grid {
+    display: none;
+  }
+
+  .column {
+    flex: 50%;
+  }
+
+  .card-body {
+    font-size: 2.5em;
+  }
+
+  .immobile {
+    display: none;
+  }
+
+  #mobile-heading {
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  .profile-card {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+}
+
